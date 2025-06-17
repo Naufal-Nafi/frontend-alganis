@@ -132,11 +132,11 @@
                         'Authorization': `Bearer ${token}`
                     }
                 });
-
+                console.log(response.data);
                 alert('User created successfully');
                 window.location.href = '/pegawai';
             } catch (error) {
-                alert('Gagal membuat user: ' + (error.response?.data?.message || error.message));
+                alert('Gagal membuat user: ' + ( error.message));
             }
         });
     </script>
