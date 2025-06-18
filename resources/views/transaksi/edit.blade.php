@@ -129,7 +129,7 @@
         document.addEventListener('DOMContentLoaded', async () => {
             const url = window.location.href;
             const id = url.split('/').pop(); // ambil id dari URL            
-            const token = localStorage.getItem('auth_token'); // jika pakai auth token
+            const token = sessionStorage.getItem('auth_token'); // jika pakai auth token
 
             try {
                 const response = await fetch(`http://127.0.0.1:8000/api/consignment/edit/${id}`, {
@@ -168,7 +168,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.querySelector('form');
-            const token = localStorage.getItem('auth_token');
+            const token = sessionStorage.getItem('auth_token');
             const url = window.location.href;
             const id = url.split('/').pop(); // ambil consignment_id dari URL
 

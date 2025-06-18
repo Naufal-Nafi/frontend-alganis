@@ -59,14 +59,14 @@
     </section>
 
     <script>
-        if (!localStorage.getItem('auth_token')) {
+        if (!sessionStorage.getItem('auth_token')) {
             window.location.href = '/';
         }
 
         document.getElementById('expenseForm').addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const token = localStorage.getItem('auth_token');
+            const token = sessionStorage.getItem('auth_token');
             const response = await axios.post(`http://127.0.0.1:8000/api/expense`, {
                 date: document.getElementById('date').value,
                 amount: document.getElementById('amount').value,
@@ -75,7 +75,6 @@
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
                     'Authorization': `Bearer ${token}`
                 }
             });
