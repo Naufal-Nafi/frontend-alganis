@@ -104,7 +104,7 @@
 
 
             const token = localStorage.getItem('auth_token');
-            const url = new URL(`http://127.0.0.1:8000/api/pegawai`, window.location.origin);
+            const url = new URL(`http://backend-alganis-production.up.railway.app/api/pegawai`, window.location.origin);
 
             url.searchParams.append('page', page);
             url.searchParams.append('per_page', perPage);
@@ -265,7 +265,7 @@
                 const token = localStorage.getItem('auth_token');
 
                 try {
-                    const response = await fetch(`http://127.0.0.1:8000/api/pegawai/delete/${id}`, {
+                    const response = await fetch(`http://backend-alganis-production.up.railway.app/api/pegawai/delete/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${token}`,

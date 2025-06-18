@@ -114,7 +114,7 @@
         async function fetchConsignments(page = 1, perPage = 10) {
             const token = localStorage.getItem('auth_token');
 
-            const response = await fetch(`http://127.0.0.1:8000/api/consignment?page=${page}&per_page=${perPage}`, {
+            const response = await fetch(`http://backend-alganis-production.up.railway.app/api/consignment?page=${page}&per_page=${perPage}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Accept': 'application/json'
@@ -280,7 +280,7 @@
                 const token = localStorage.getItem('auth_token');
 
                 try {
-                    const res = await fetch(`http://127.0.0.1:8000/api/consignment/delete/${id}`, {
+                    const res = await fetch(`http://backend-alganis-production.up.railway.app/api/consignment/delete/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${token}`,
@@ -312,7 +312,7 @@
         async function printConsignment(id) {
             const token = localStorage.getItem('auth_token');
             try {
-                const response = await fetch(`http://127.0.0.1:8000/api/consignment/print/${id}`, {
+                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/consignment/print/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,                        
                     }

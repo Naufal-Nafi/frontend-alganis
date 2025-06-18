@@ -74,7 +74,7 @@
             const token = localStorage.getItem('auth_token');
 
             try {
-                const response = await fetch(`http://127.0.0.1:8000/api/pegawai/edit/${id}`, {
+                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/pegawai/edit/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'
@@ -112,7 +112,7 @@
                 };
 
                 try {
-                    const response = await fetch(`http://127.0.0.1:8000/api/pegawai/update/${id}`, {
+                    const response = await fetch(`http://backend-alganis-production.up.railway.app/api/pegawai/update/${id}`, {
                         method: 'PUT', // atau 'POST' sesuai API kamu
                         headers: {
                             'Content-Type': 'application/json',

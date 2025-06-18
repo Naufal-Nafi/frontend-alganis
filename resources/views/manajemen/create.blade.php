@@ -120,7 +120,7 @@
             const token = localStorage.getItem('auth_token');
 
             try {
-                const response = await axios.post(`http://127.0.0.1:8000/api/pegawai`, {
+                const response = await axios.post(`http://backend-alganis-production.up.railway.app/api/pegawai`, {
                     name: name,
                     email: email,
                     password: password

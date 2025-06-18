@@ -67,7 +67,7 @@
             e.preventDefault();
 
             const token = localStorage.getItem('auth_token');
-            const response = await axios.post(`http://127.0.0.1:8000/api/expense`, {
+            const response = await axios.post(`http://backend-alganis-production.up.railway.app/api/expense`, {
                 date: document.getElementById('date').value,
                 amount: document.getElementById('amount').value,
                 description: document.getElementById('description').value

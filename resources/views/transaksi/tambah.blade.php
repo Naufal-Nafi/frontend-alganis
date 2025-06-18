@@ -151,7 +151,7 @@
             }
 
             try {
-                const response = await axios.post(`http://127.0.0.1:8000/api/consignment`, {
+                const response = await axios.post(`http://backend-alganis-production.up.railway.app/api/consignment`, {
                     store_name: storeName,
                     product_name: productName,
                     exit_date: document.getElementById('exit_date').value,
