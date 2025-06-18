@@ -66,15 +66,13 @@
                 const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/pdf`, {
                     method: 'POST',
                     headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Accept': 'application/pdf',
-                        'Content-Type': 'application/json'
+                        'Authorization': `Bearer ${token}`,                        
                     },
                     body: JSON.stringify({ start_date, end_date })
                 });
 
                 if (!response.ok) throw new Error('Gagal mengunduh PDF');
-
+                console.log(response);
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
