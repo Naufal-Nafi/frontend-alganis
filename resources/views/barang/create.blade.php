@@ -59,7 +59,7 @@
     </section>
 
     <script>
-        if (!localStorage.getItem('auth_token')) {
+        if (!sessionStorage.getItem('auth_token')) {
             window.location.href = '/';
         }
 
@@ -75,7 +75,6 @@
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
                     'Authorization': `Bearer ${token}`
                 }
             });

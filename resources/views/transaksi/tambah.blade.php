@@ -127,14 +127,14 @@
 
 
     <script>
-        if (!localStorage.getItem('auth_token')) {
+        if (!sessionStorage.getItem('auth_token')) {
             window.location.href = '/';
         }
 
         document.getElementById('consignmentStore').addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const token = localStorage.getItem('auth_token');
+            const token = sessionStorage.getItem('auth_token');
 
             const storeName = document.getElementById('store_name').value.trim();
             const productName = document.getElementById('product_name').value.trim();
@@ -161,7 +161,6 @@
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
                         'Authorization': `Bearer ${token}`
                     }
                 });
