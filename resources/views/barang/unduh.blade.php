@@ -63,16 +63,15 @@
             const end_date = document.getElementById('end_date').value;
 
             try {
-                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/pdf`, {
-                    method: 'POST',
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/pdf?start_date=${start_date}&end_date=${end_date}`, {                    
                     headers: {
-                        'Authorization': `Bearer ${token}`,                        
-                    },
-                    body: JSON.stringify({ start_date, end_date })
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/pdf',                        
+                    }                    
                 });
 
                 if (!response.ok) throw new Error('Gagal mengunduh PDF');
-                console.log(response);
+
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
