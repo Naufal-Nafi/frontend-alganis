@@ -94,7 +94,7 @@
         async function fetchExpenses(page = 1, perPage = 10) {
             const token = sessionStorage.getItem('auth_token');
 
-            const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense?page=${page}&per_page=${perPage}`, {
+            const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense?page=${page}&per_page=${perPage}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Accept': 'application/json'
@@ -248,7 +248,7 @@
                 const token = sessionStorage.getItem('auth_token');
 
                 try {
-                    const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense/delete/${id}`, {
+                    const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/delete/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${token}`,

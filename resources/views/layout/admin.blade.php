@@ -127,7 +127,7 @@
                     return;
                 }
 
-                const response = await fetch('http://backend-alganis-production.up.railway.app/api/logout', {
+                const response = await fetch('https://backend-alganis-production.up.railway.app/api/logout', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`,

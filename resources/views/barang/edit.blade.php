@@ -65,7 +65,7 @@
             const token = sessionStorage.getItem('auth_token');
 
             try {
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense/edit/${id}`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/edit/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'
@@ -103,7 +103,7 @@
                 };
 
                 try {
-                    const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense/update/${id}`, {
+                    const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/update/${id}`, {
                         method: 'PUT', // atau 'POST' sesuai API kamu
                         headers: {
                             'Content-Type': 'application/json',

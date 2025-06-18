@@ -63,7 +63,7 @@
             const end_date = document.getElementById('end_date').value;
 
             try {
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense/pdf`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense/pdf`, {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`,

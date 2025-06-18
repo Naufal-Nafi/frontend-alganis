@@ -70,7 +70,7 @@
             const errorList = document.getElementById('errorList');
 
             try {
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/login`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

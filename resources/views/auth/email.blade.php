@@ -59,7 +59,7 @@
         messageDiv.innerHTML = '';
 
         try {
-            const response = await fetch(`http://backend-alganis-production.up.railway.app/api/login/forgot-password`, {
+            const response = await fetch(`https://backend-alganis-production.up.railway.app/api/login/forgot-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

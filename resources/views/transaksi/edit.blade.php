@@ -132,7 +132,7 @@
             const token = sessionStorage.getItem('auth_token'); // jika pakai auth token
 
             try {
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/consignment/edit/${id}`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/consignment/edit/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`, // jika pakai Sanctum API token
                         'Accept': 'application/json'
@@ -186,7 +186,7 @@
                 };
 
                 try {
-                    const response = await fetch(`http://backend-alganis-production.up.railway.app/api/consignment/update/${id}`, {
+                    const response = await fetch(`https://backend-alganis-production.up.railway.app/api/consignment/update/${id}`, {
                         method: 'PUT', // atau 'POST' sesuai API kamu
                         headers: {
                             'Content-Type': 'application/json',

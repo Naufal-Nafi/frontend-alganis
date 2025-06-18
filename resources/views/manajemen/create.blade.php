@@ -120,7 +120,7 @@
             const token = sessionStorage.getItem('auth_token');
 
             try {
-                const response = await axios.post(`http://backend-alganis-production.up.railway.app/api/pegawai`, {
+                const response = await axios.post(`https://backend-alganis-production.up.railway.app/api/pegawai`, {
                     name: name,
                     email: email,
                     password: password

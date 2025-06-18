@@ -186,7 +186,7 @@
             try {
                 const token = sessionStorage.getItem('auth_token');
 
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/dashboard?page=${page}`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/dashboard?page=${page}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'
@@ -289,7 +289,7 @@
             try {
                 const token = sessionStorage.getItem('auth_token');
 
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/expense?page=${page}`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/expense?page=${page}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'
@@ -416,10 +416,10 @@
 
     <script>
         const reportFrames = [
-            { id: 'dailyReportChart', sectionId: 'dailySection', url: `http://backend-alganis-production.up.railway.app/api/dashboard/daily-report`, rendered: false },
-            { id: 'fortnightlyReportChart', sectionId: 'fortnightlySection', url: `http://backend-alganis-production.up.railway.app/api/dashboard/fortnightly-report`, rendered: false },
-            { id: 'weeklyReportChart', sectionId: 'weeklySection', url: `http://backend-alganis-production.up.railway.app/api/dashboard/weekly-report`, rendered: false },
-            { id: 'monthlyReportChart', sectionId: 'monthlySection', url: `http://backend-alganis-production.up.railway.app/api/dashboard/monthly-report`, rendered: false }
+            { id: 'dailyReportChart', sectionId: 'dailySection', url: `https://backend-alganis-production.up.railway.app/api/dashboard/daily-report`, rendered: false },
+            { id: 'fortnightlyReportChart', sectionId: 'fortnightlySection', url: `https://backend-alganis-production.up.railway.app/api/dashboard/fortnightly-report`, rendered: false },
+            { id: 'weeklyReportChart', sectionId: 'weeklySection', url: `https://backend-alganis-production.up.railway.app/api/dashboard/weekly-report`, rendered: false },
+            { id: 'monthlyReportChart', sectionId: 'monthlySection', url: `https://backend-alganis-production.up.railway.app/api/dashboard/monthly-report`, rendered: false }
         ];
 
         async function renderLineChart(frame) {
@@ -599,7 +599,7 @@
         async function renderChart(frame) {
             try {
                 const token = localStorage.getItem('auth_token');
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/dashboard/income-percentage/${frame.days}`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/dashboard/income-percentage/${frame.days}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'
@@ -679,7 +679,7 @@
         async function renderStoreIncomeChart() {
             try {
                 const token = localStorage.getItem('auth_token');
-                const response = await fetch(`http://backend-alganis-production.up.railway.app/api/dashboard/store-income-percentage`, {
+                const response = await fetch(`https://backend-alganis-production.up.railway.app/api/dashboard/store-income-percentage`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json'

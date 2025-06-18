@@ -64,7 +64,7 @@
         console.log(email, token, password, password_confirmation);
 
         try {
-            const response = await fetch(`http://backend-alganis-production.up.railway.app/api/login/reset-password`, {
+            const response = await fetch(`https://backend-alganis-production.up.railway.app/api/login/reset-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
