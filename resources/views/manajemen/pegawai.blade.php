@@ -103,7 +103,7 @@
             }
 
 
-            const token = localStorage.getItem('auth_token');
+            const token = sessionStorage.getItem('auth_token');
             const url = new URL(`https://backend-alganis-production.up.railway.app/api/pegawai`, window.location.origin);
 
             url.searchParams.append('page', page);

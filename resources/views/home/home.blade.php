@@ -598,7 +598,7 @@
 
         async function renderChart(frame) {
             try {
-                const token = localStorage.getItem('auth_token');
+                const token = sessionStorage.getItem('auth_token');
                 const response = await fetch(`https://backend-alganis-production.up.railway.app/api/dashboard/income-percentage/${frame.days}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -678,7 +678,7 @@
     <script>
         async function renderStoreIncomeChart() {
             try {
-                const token = localStorage.getItem('auth_token');
+                const token = sessionStorage.getItem('auth_token');
                 const response = await fetch(`https://backend-alganis-production.up.railway.app/api/dashboard/store-income-percentage`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,

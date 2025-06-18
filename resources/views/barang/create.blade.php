@@ -66,7 +66,7 @@
         document.getElementById('expenseForm').addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const token = localStorage.getItem('auth_token');
+            const token = sessionStorage.getItem('auth_token');
             const response = await axios.post(`https://backend-alganis-production.up.railway.app/api/expense`, {
                 date: document.getElementById('date').value,
                 amount: document.getElementById('amount').value,
